@@ -1,5 +1,5 @@
 <?php 
-include_once "conexao/Conexao.php";
+include_once "Conexao.php";
 include_once "model/Usuario.php";
 include_once "dao/UsuarioDAO.php";
 
@@ -37,7 +37,7 @@ $usuariodao = new UsuarioDAO();
         </div>
     </nav>
          <div class="container">
-             <form action="controller/UsuarioController.php" method="POST">
+             <form action="/controller/UsuarioController.php" method="POST">
                 <div class="row">
                     <div class="col-md-3">
                         <label>Nome</label>
@@ -88,7 +88,7 @@ $usuariodao = new UsuarioDAO();
                                     <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#editar><?= $usuario->getId() ?>">
                                         Editar
                                     </button>
-                                    <a href="controller/UsuarioController.php?del=<?= $usuario->getId() ?>">
+                                    <a href="/controller/UsuarioController.php?del=<?= $usuario->getId() ?>">
                                     <button class="btn btn-danger btn-sm" type="button">Excluir</button>    
                                     </a>
                                 </td>
@@ -105,7 +105,7 @@ $usuariodao = new UsuarioDAO();
                                             </button>
                                         </div>
                                     <div class="modal-body">
-                                    <form action="controller/UsuarioController.php" method="POST">
+                                    <form action="/controller/UsuarioController.php" method="POST">
                                         <div class="row">
                                             <div class="col-md-5">
                                                 <label>Nome</label>

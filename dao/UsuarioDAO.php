@@ -23,7 +23,7 @@ class UsuarioDAO{
         try{
             $sql = "SELECT * FROM usuario order by nome asc";
             $result = Conexao::getConexao()->query($sql);
-            $result = $result->fetchAll(PDO::FETCH_ASSOC);
+            $lista = $result->fetchAll(PDO::FETCH_ASSOC);
             $f_lista = array();
             foreach($lista as $l){
                 $f_lista[] = $this->listaUsuarios($l);

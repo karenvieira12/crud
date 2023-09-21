@@ -1,5 +1,5 @@
 <?php
-include_once "../conexao/Conexao.php";
+include_once "../Conexao.php";
 include_once "../model/Usuario.php";
 include_once "../dao/UsuarioDAO.php";
 
@@ -19,12 +19,13 @@ if(isset($_POST['cadastrar'])){
     header("Location: ../../");
 }
 
-else if(isset($_POST('editar'))){
+else if(isset($_POST['editar'])){
 
     $usuario->setNome($d['nome']);
     $usuario->setSobrenome($d['sobrenome']);
     $usuario->setIdade($d['idade']);
     $usuario->setSexo($d['sexo']);
+    $usuario->setId($d['id']);
 
     $usuariodao->update($usuario);
 
